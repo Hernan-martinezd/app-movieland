@@ -1,0 +1,80 @@
+<div class="container mt-4">
+  <h2 class="text-center">Create an Actor</h2>
+  <form [formGroup]="actorForm" (ngSubmit)="!actorForm.invalid && createActor(actorForm.value)">
+    <!--Name-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="name">Name</label>
+      <input novalidate id="name" class="form-control" formControlName="name" placeholder="Actor's name" />
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          actorForm.get('name')!.hasError('required') &&
+          actorForm.get('name')!.touched
+        ">
+        Name required
+      </div>
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="actorForm.get('name')!.hasError('minlength')">
+        Name too short
+      </div>
+    </div>
+
+    <!--Photo-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="photo">Photo</label>
+      <input novalidate id="photo" class="form-control" formControlName="photo" placeholder="URL with Actor's photo" />
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+              actorForm.get('photo')!.hasError('required') &&
+              actorForm.get('photo')!.touched
+            ">
+        Image required
+      </div>
+    </div>
+
+    <!--Nationality-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="nationality">Nationality</label>
+      <input novalidate id="nationality" class="form-control" formControlName="nationality"
+        placeholder="Actor's nationality" />
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          actorForm.get('nationality')!.hasError('required') &&
+          actorForm.get('nationality')!.touched
+        ">
+        Nationality required
+      </div>
+    </div>
+
+    <!--biography-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="biography">Biography</label>
+      <input novalidate id="biography" class="form-control" formControlName="biography" 
+      placeholder="Actor's biography" />
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+              actorForm.get('biography')!.hasError('required') &&
+              actorForm.get('biography')!.touched
+            ">
+        biography required
+      </div>
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="actorForm.get('biography')!.hasError('minlength')">
+        Biography too short
+      </div>
+    </div>
+
+        <!--BirthDate-->
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="birthDate">BirthDate</label>
+          <input novalidate id="birthDate" class="form-control" formControlName="birthDate"
+            placeholder="Actor's birthDate" />
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+              actorForm.get('birthDate')!.hasError('required') &&
+              actorForm.get('birthDate')!.touched
+            ">
+            birthDate required
+          </div>
+        </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!actorForm.valid">
+      Create
+    </button>
+    <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">
+      Cancel
+    </button>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+<div *ngIf="selected">
+  <app-platform-detail [platformDetail]="selectedPlatform"></app-platform-detail>
+</div>
+
+
+<div class="container-fluid main-container">
+  <div class="row">
+    <div class="col mb-2" *ngFor="let platform of platforms">
+      <div class="card p-2 main-container" style="width: 15rem; height: 20rem">
+        <div class="card-img-overlay card-style">
+          <img
+            class="card-img-top"
+            src="{{ platform.movies[0].poster }}"
+            alt="{{ platform.name }}"
+          />
+          <div class="centered-text" (click)="onSelected(platform)">
+            {{ platform.name }}
+          </div>
+        </div>
+        <div class="card-body">
+          <a class="card-link" >Listar películas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

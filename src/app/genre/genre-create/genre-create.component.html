@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <h2 class="text-center">Create a genre</h2>
+  <form [formGroup]="genreForm" (ngSubmit)="!genreForm.invalid && createGenre(genreForm.value)">
+    <!--Type-->
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="type">Type</label>
+      <input novalidate id="type" class="form-control" formControlName="type" placeholder="Movie's genre" />
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          genreForm.get('type')!.hasError('required') &&
+          genreForm.get('type')!.touched
+        ">
+        Name required
+      </div>
+      <div class="alert alert-danger alert-dismissible fade show" *ngIf="genreForm.get('type')!.hasError('minlength')">
+        Name too short
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!genreForm.valid">
+      Create
+    </button>
+    <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">
+      Cancel
+    </button>
+  </form>
+</div>

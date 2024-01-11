@@ -1,0 +1,35 @@
+<testExecutions version="1">
+  <file path="src/app/platform/platform.service.spec.ts">
+    <testCase name="Service: Platform should ..." duration="27"/>
+  </file>
+  <file path="src/app/platform/platform-list/platform-list.component.spec.ts">
+    <testCase name="PlatformListComponent should have 9 &lt;div.col.mb-2> elements and the deleted book should not exist" duration="28"/>
+    <testCase name="PlatformListComponent should have 10 &lt;div.card-body> elements" duration="4"/>
+    <testCase name="PlatformListComponent should have 10 &lt;img> elements" duration="5"/>
+    <testCase name="PlatformListComponent should have 10 &lt;div.col.mb-2> elements" duration="4"/>
+    <testCase name="PlatformListComponent should create" duration="3"/>
+    <testCase name="PlatformListComponent should have h5 tag with the book.name" duration="4"/>
+    <testCase name="PlatformListComponent should have the corresponding src to the book image and alt to the book name" duration="4"/>
+    <testCase name="PlatformListComponent should have 10 &lt;card.p-2> elements" duration="7"/>
+  </file>
+  <file path="src/app/genre/genre.service.spec.ts">
+    <testCase name="Service: Genre should ..." duration="3"/>
+  </file>
+  <file path="src/app/genre/genre-list/genre-list.component.spec.ts">
+    <testCase name="GenreListComponent should have 9 &lt;div.col.mb-2> elements and the deleted book should not exist" duration="9"/>
+    <testCase name="GenreListComponent should have the corresponding src to the book image and alt to the book name" duration="4"/>
+    <testCase name="GenreListComponent should have 10 &lt;div.card-body> elements" duration="3"/>
+    <testCase name="GenreListComponent should have 10 &lt;img> elements" duration="4"/>
+    <testCase name="GenreListComponent should have 10 &lt;card.p-2> elements" duration="4"/>
+    <testCase name="GenreListComponent should have 10 &lt;div.col.mb-2> elements" duration="3"/>
+    <testCase name="GenreListComponent should create" duration="6"/>
+    <testCase name="GenreListComponent should have h5 tag with the book.name" duration="4"/>
+  </file>
+  <file path="src/app/genre/genre-detail/genre-detail.component.spec.ts">
+    <testCase name="GenreDetailComponent should create" duration="7"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'base-project'" duration="7"/>
+    <testCase name="AppComponent should create the app" duration="4"/>
+  </file>
+</testExecutions>

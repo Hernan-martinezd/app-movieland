@@ -1,0 +1,32 @@
+  .background-image {
+    background-image: url(./../../header.png);
+    width: 100%; /* Asegura que el div ocupe todo el ancho de su contenedor */
+    height: 75px; /* Altura del div */
+    background-repeat: repeat-x;
+    z-index: -1; /* Asegura que esté detrás del contenido */
+    background-size: 300px 100%; 
+    background-color: black;
+    border: 10px solid #000;
+    
+  }
+  
+  .image-header{
+    z-index: -1;
+    height: 100px; 
+  }
+
+  .button-click{
+    border-color: rgb(0, 73, 207);
+    color: rgb(255, 255, 255);
+  }
+  
+  .corporate-name{
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .search-input{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(85, 85, 85);
+  }
+

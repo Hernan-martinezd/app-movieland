@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="card main-container2">
+    <div class="row no-gutters">
+      <div class="col-3" style="background: url('{{platformDetail.movies[0].poster}}') no-repeat center; background-size: cover;">
+     
+      </div>
+      <div class="col-9">
+        <div class="card-body">
+          <h5 class="card-title">Plataforma de películas - {{platformDetail.name}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mt-4 two-columns-div" *ngFor="let movie of platformDetail.movies">
+    <ul>
+      <li class="movie-element">{{movie.title}}</li>
+    </ul>
+
+  </div>
+
+</div>

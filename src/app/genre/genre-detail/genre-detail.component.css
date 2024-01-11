@@ -1,0 +1,14 @@
+  .main-container {
+      background-color: #000000;
+      padding: 40px;
+      border: #a6ff00;
+    }
+  
+  .two-columns-div{
+      column-count: 2;
+  }
+  
+  .movie-element{
+      color: rgb(255, 255, 255);
+  }
+  

@@ -1,0 +1,22 @@
+
+<div class="container-fluid main-container">
+  <div class="row">
+    <div class="col mb-2" *ngFor="let actor of actors">
+      <div class="card p-2 main-container" style="width: 15rem; height: 20rem">
+        <div class="card-img-overlay card-style">
+          <img
+            class="card-img-top"
+            src="{{ actor.movies[0]?.poster }}"
+            alt="{{ actor.name }}"
+          />
+          <div class="centered-text" (click)="onSelected(actor)">
+            {{ actor.name }}
+          </div>
+        </div>
+        <div class="card-body">
+          <a class="card-link" >Listar películas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

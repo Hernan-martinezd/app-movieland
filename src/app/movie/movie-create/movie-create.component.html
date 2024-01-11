@@ -1,0 +1,80 @@
+<div class="container mt-4">
+    <h2 class="text-center">Create a Movie</h2>
+    <form [formGroup]="movieForm" (ngSubmit)="!movieForm.invalid && createMovie(movieForm.value)">
+      <!--Title-->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="title">title</label>
+        <input novalireleaseDate id="title" class="form-control" formControlTitle="title" placeholder="Movie's title" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            movieForm.get('title')!.hasError('required') &&
+            movieForm.get('title')!.touched
+          ">
+          Title required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="movieForm.get('title')!.hasError('minlength')">
+          Title too short
+        </div>
+      </div>
+  
+      <!--Poster-->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="poster">Poster</label>
+        <input novalireleaseDate id="poster" class="form-control" formControltitle="poster" placeholder="URL with Movie's poster" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+                movieForm.get('poster')!.hasError('required') &&
+                movieForm.get('poster')!.touched
+              ">
+          Image required
+        </div>
+      </div>
+  
+      <!--Country-->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="country">Country</label>
+        <input novalireleaseDate id="country" class="form-control" formControltitle="country"
+          placeholder="Movie's country" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            movieForm.get('country')!.hasError('required') &&
+            movieForm.get('country')!.touched
+          ">
+          Country required
+        </div>
+      </div>
+  
+      <!--duration-->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="duration">Duration</label>
+        <input novalireleaseDate id="duration" class="form-control" formControltitle="duration" 
+        placeholder="Movie's duration" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+                movieForm.get('duration')!.hasError('required') &&
+                movieForm.get('duration')!.touched
+              ">
+          Duration required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="movieForm.get('duration')!.hasError('minlength')">
+          Duration too short
+        </div>
+      </div>
+  
+          <!--releaseDate-->
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="releaseDate">ReleaseDate</label>
+            <input novalireleaseDate id="releaseDate" class="form-control" formControltitle="releaseDate"
+              placeholder="Movie's releaseDate" />
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+                movieForm.get('releaseDate')!.hasError('required') &&
+                movieForm.get('releaseDate')!.touched
+              ">
+              Release date required
+            </div>
+          </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="!movieForm.valid">
+        Create
+      </button>
+      <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">
+        Cancel
+      </button>
+    </form>
+  </div>
